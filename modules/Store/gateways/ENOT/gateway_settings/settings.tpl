@@ -2,11 +2,14 @@
     <div class="card shadow border-left-primary">
         <div class="card-body">
             <h5><i class="icon fa fa-info-circle"></i> Платежная система <a href="https://cabinet.enot.io/registration" target="_blank">ENOT</a></h5></br>
-            - <b>Карты</b>: <b>Оплата картой РФ</b></br>
-            - <b>Кошельки</b>: <b>Perfect money</b></br>
+            - <b>Банковские карты</b>: <b>Карты РФ</b></br>
+            - <b>Электронные кошельки</b>: <b>Perfect Money</b></br>
             - <b>Криптовалюты</b>: <b>Bitcoin</b>, <b>Ethereum</b>, <b>USDT TRC20</b>, <b>USDT ERC20</b>, <b>Litecoin</b>, <b>TRX</b> и <b>DASH</b></br></br>
             - Для регистрации в ENOT используйте <a href="https://cabinet.enot.io/registration" target="_blank">эту ссылку</a>.</br>
-            - Модуль прошел тесты и работает на версиях магазина 1.7.1 - 1.8.0.
+            - Модуль прошел тесты и работает на версиях магазина 1.7.1 и выше.</br>
+            - <b>URL Оповещения:</b> https://<Ваш домен>/store/listener/?gateway=ENOT</br>
+            - <b>URL успешной оплаты:</b> https://<Ваш домен>/store/checkout/?do=complete</br>
+            - <b>URL неудачной оплаты:</b> На ваш выбор :)
         </div>
     </div>
 
