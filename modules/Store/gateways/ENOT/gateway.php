@@ -24,6 +24,7 @@ class Enot_Gateway extends GatewayBase {
     public function processOrder(Order $order): void {
         $shopId = StoreConfig::get('ENOT.shopuuid_key');
         $apiKey = StoreConfig::get('ENOT.secret1_key');
+        $callba = StoreConfig::get('ENOT.enot_callb');
         
         if ($shopId == null || empty($shopId)) {
             $this->addError('The administration has not completed the configuration of this gateway!');
@@ -39,6 +40,7 @@ class Enot_Gateway extends GatewayBase {
             "order_id" => (string) $payment_id,
             "currency" => $currency,
             "shop_id" => $shopId,
+            "hook_url" => $callba,
         ];
 
         $url = "https://api.mivion.com/invoice/create";

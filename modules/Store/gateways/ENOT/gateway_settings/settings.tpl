@@ -28,6 +28,10 @@
 <input class="form-control" type="text" id="inputENOTApiKey2" name="secret2_key" value="{$SHOP_API_KEY_2_VALUE}" placeholder="{$SHOP_KEY2}">
 </div>
 
+<div class="form-group"><label for="inputENOThook">{$SHOP_URL_HOOK}</label>
+<input class="form-control" type="text" id="inputENOThook" name="enot_callb" value="{$ENOT_CALLB}" placeholder="{$SHOP_URL_HOOK}">
+</div>
+
 <div class="form-group custom-control custom-switch">
 <input id="inputEnabled" name="enable" type="checkbox" class="custom-control-input"{if $ENABLE_VALUE eq 1} checked{/if} />
 <label class="custom-control-label" for="inputEnabled">{$ENABLE_GATEWAY}</label>

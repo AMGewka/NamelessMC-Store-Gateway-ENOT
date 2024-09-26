@@ -2,6 +2,7 @@
     "shopid": "ID Магазина",
     "key1": "Секретный ключ №1",
     "key2": "Секретный ключ №2",
+    "shophookurl": "URL Оповещения: https://ВАШ_ДОМЕН/store/listener/?gateway=ENOT",
     "enablegateway": "Включить способ оплаты",
     "gatewayname": " Платежная система <a href=\"https://cabinet.enot.io/registration\" target=\"_blank\">ENOT</a>",
     "bankcard": "<b>Банковские карты</b>: <b>Карты РФ</b>",

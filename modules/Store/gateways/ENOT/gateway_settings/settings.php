@@ -15,6 +15,7 @@ $smarty->assign([
     'SHOP_ID' => $enot_language->get('shopid'),
     'SHOP_KEY1' => $enot_language->get('key1'),
     'SHOP_KEY2' => $enot_language->get('key2'),
+    'SHOP_URL_HOOK' => $enot_language->get('shophookurl'),
     'ENABLE_GATEWAY' => $enot_language->get('enablegateway'),
     'GATEWAY_NAME' => $enot_language->get('gatewayname'),
     'BANK_CARD' => $enot_language->get('bankcard'),
@@ -28,13 +29,14 @@ $smarty->assign([
 ]);
 if (Input::exists()) {
     if (Token::check()) {
-        if (isset($_POST['shopuuid_key']) && isset($_POST['secret1_key']) && isset($_POST['secret2_key']) && strlen($_POST['shopuuid_key']) && strlen($_POST['secret1_key']) && strlen($_POST['secret2_key'])) {
+        if (isset($_POST['shopuuid_key']) && isset($_POST['secret1_key']) && isset($_POST['secret2_key']) && isset($_POST['enot_callb']) && strlen($_POST['shopuuid_key']) && strlen($_POST['secret1_key']) && strlen($_POST['secret2_key']) && strlen($_POST['enot_callb'])) {
             StoreConfig::set('ENOT.shopuuid_key', $_POST['shopuuid_key']);
             StoreConfig::set('ENOT.secret1_key', $_POST['secret1_key']);
             StoreConfig::set('ENOT.secret2_key', $_POST['secret2_key']);
+            StoreConfig::set('ENOT.enot_callb', $_POST['enot_callb']);
         }
 
-        // Is this gateway enabled
+        //  Is this gateway enabled
         if (isset($_POST['enable']) && $_POST['enable'] == 'on') $enabled = 1;
         else $enabled = 0;
 
@@ -52,5 +54,6 @@ $smarty->assign([
     'ENABLE_VALUE' => ((isset($enabled)) ? $enabled : $gateway->isEnabled()),
     'SHOP_UUID_VALUE' => ((isset($_POST['shopuuid_key']) && $_POST['shopuuid_key']) ? Output::getClean(Input::get('shopuuid_key')) : StoreConfig::get('ENOT.shopuuid_key')),
     'SHOP_API_KEY_VALUE' => ((isset($_POST['secret1_key']) && $_POST['secret1_key']) ? Output::getClean(Input::get('secret1_key')) : StoreConfig::get('ENOT.secret1_key')),
-    'SHOP_API_KEY_2_VALUE' => ((isset($_POST['secret2_key']) && $_POST['secret2_key']) ? Output::getClean(Input::get('secret2_key')) : StoreConfig::get('ENOT.secret2_key'))
+    'SHOP_API_KEY_2_VALUE' => ((isset($_POST['secret2_key']) && $_POST['secret2_key']) ? Output::getClean(Input::get('secret2_key')) : StoreConfig::get('ENOT.secret2_key')),
+    'ENOT_CALLB' => ((isset($_POST['enot_callb']) && $_POST['enot_callb']) ? Output::getClean(Input::get('enot_callb')) : StoreConfig::get('ENOT.enot_callb'))
 ]);
