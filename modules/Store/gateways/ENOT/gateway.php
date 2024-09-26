@@ -4,7 +4,7 @@
  *
  * @package Modules\Store
  * @author AMGewka
- * @version 1.8.1
+ * @version 1.8.2
  * @license MIT
  */
 class Enot_Gateway extends GatewayBase {
@@ -12,7 +12,7 @@ class Enot_Gateway extends GatewayBase {
     public function __construct() {
         $name = 'ENOT';
         $author = '<a href="https://github.com/AMGewka" target="_blank" rel="nofollow noopener">AMGewka</a>';
-        $gateway_version = '1.8.1';
+        $gateway_version = '1.8.2';
         $store_version = '1.7.1';
         $settings = ROOT_PATH . '/modules/Store/gateways/ENOT/gateway_settings/settings.php';
 
@@ -26,7 +26,7 @@ class Enot_Gateway extends GatewayBase {
         $apiKey = StoreConfig::get('ENOT.secret1_key');
         
         if ($shopId == null || empty($shopId)) {
-            $this->addError('Администрация не завершила настройку данного шлюза!');
+            $this->addError('The administration has not completed the configuration of this gateway!');
             return;
         }
 
@@ -39,7 +39,6 @@ class Enot_Gateway extends GatewayBase {
             "order_id" => (string) $payment_id,
             "currency" => $currency,
             "shop_id" => $shopId,
-            "hook_url" => 'https://www.kenigcraft.ru/store/listener/?gateway=ENOT',
         ];
 
         $url = "https://api.mivion.com/invoice/create";

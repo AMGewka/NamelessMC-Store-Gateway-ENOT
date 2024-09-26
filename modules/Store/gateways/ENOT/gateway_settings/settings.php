@@ -9,7 +9,23 @@
  *  Store module
  */
 require_once(ROOT_PATH . '/modules/Store/classes/StoreConfig.php');
+$enot_language = new Language(ROOT_PATH . '/modules/Store/gateways/ENOT/language', LANGUAGE);
 
+$smarty->assign([
+    'SHOP_ID' => $enot_language->get('shopid'),
+    'SHOP_KEY1' => $enot_language->get('key1'),
+    'SHOP_KEY2' => $enot_language->get('key2'),
+    'ENABLE_GATEWAY' => $enot_language->get('enablegateway'),
+    'GATEWAY_NAME' => $enot_language->get('gatewayname'),
+    'BANK_CARD' => $enot_language->get('bankcard'),
+    'ONLINE_WALLET' => $enot_language->get('onlinewal'),
+    'CRYPTOCURRENCIES' => $enot_language->get('crypto'),
+    'GATEWAY_LINK' => $enot_language->get('gatewaylink'),
+    'GATEWAY_TESTED' => $enot_language->get('gatewaytest'),
+    'ALERT_URL' => $enot_language->get('alerturl'),
+    'SUCCESS_URL' => $enot_language->get('sucurl'),
+    'FAILED_URL' => $enot_language->get('failurl')
+]);
 if (Input::exists()) {
     if (Token::check()) {
         if (isset($_POST['shopuuid_key']) && isset($_POST['secret1_key']) && isset($_POST['secret2_key']) && strlen($_POST['shopuuid_key']) && strlen($_POST['secret1_key']) && strlen($_POST['secret2_key'])) {
