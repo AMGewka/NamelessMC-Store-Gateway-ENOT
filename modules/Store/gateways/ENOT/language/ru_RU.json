@@ -3,6 +3,7 @@
     "key1": "Секретный ключ №1",
     "key2": "Секретный ключ №2",
     "shophookurl": "URL Оповещения: https://ВАШ_ДОМЕН/store/listener/?gateway=ENOT",
+    "enotapiurl": "API URL: <br>Стандартный: https://api.enot.io/invoice/create<br>Резервный-1: https://api.mivion.com/invoice/create<br>Резервный-2: https://api.quilop.com/invoice/create",
     "enablegateway": "Включить способ оплаты",
     "gatewayname": " Платежная система <a href=\"https://cabinet.enot.io/registration\" target=\"_blank\">ENOT</a>",
     "bankcard": "<b>Банковские карты</b>: <b>Карты РФ</b>",

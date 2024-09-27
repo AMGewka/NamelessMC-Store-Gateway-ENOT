@@ -25,15 +25,17 @@ $smarty->assign([
     'GATEWAY_TESTED' => $enot_language->get('gatewaytest'),
     'ALERT_URL' => $enot_language->get('alerturl'),
     'SUCCESS_URL' => $enot_language->get('sucurl'),
-    'FAILED_URL' => $enot_language->get('failurl')
+    'FAILED_URL' => $enot_language->get('failurl'),
+    'ENOT_URL' => $enot_language->get('enotapiurl')
 ]);
 if (Input::exists()) {
     if (Token::check()) {
-        if (isset($_POST['shopuuid_key']) && isset($_POST['secret1_key']) && isset($_POST['secret2_key']) && isset($_POST['enot_callb']) && strlen($_POST['shopuuid_key']) && strlen($_POST['secret1_key']) && strlen($_POST['secret2_key']) && strlen($_POST['enot_callb'])) {
+        if (isset($_POST['shopuuid_key']) && isset($_POST['secret1_key']) && isset($_POST['secret2_key']) && isset($_POST['enot_callb']) && isset($_POST['enot_apiurl']) && strlen($_POST['shopuuid_key']) && strlen($_POST['secret1_key']) && strlen($_POST['secret2_key']) && strlen($_POST['enot_callb']) && strlen($_POST['enot_apiurl'])) {
             StoreConfig::set('ENOT.shopuuid_key', $_POST['shopuuid_key']);
             StoreConfig::set('ENOT.secret1_key', $_POST['secret1_key']);
             StoreConfig::set('ENOT.secret2_key', $_POST['secret2_key']);
             StoreConfig::set('ENOT.enot_callb', $_POST['enot_callb']);
+            StoreConfig::set('ENOT.enot_apiurl', $_POST['enot_apiurl']);
         }
 
         //  Is this gateway enabled
@@ -55,5 +57,6 @@ $smarty->assign([
     'SHOP_UUID_VALUE' => ((isset($_POST['shopuuid_key']) && $_POST['shopuuid_key']) ? Output::getClean(Input::get('shopuuid_key')) : StoreConfig::get('ENOT.shopuuid_key')),
     'SHOP_API_KEY_VALUE' => ((isset($_POST['secret1_key']) && $_POST['secret1_key']) ? Output::getClean(Input::get('secret1_key')) : StoreConfig::get('ENOT.secret1_key')),
     'SHOP_API_KEY_2_VALUE' => ((isset($_POST['secret2_key']) && $_POST['secret2_key']) ? Output::getClean(Input::get('secret2_key')) : StoreConfig::get('ENOT.secret2_key')),
-    'ENOT_CALLB' => ((isset($_POST['enot_callb']) && $_POST['enot_callb']) ? Output::getClean(Input::get('enot_callb')) : StoreConfig::get('ENOT.enot_callb'))
+    'ENOT_CALLB' => ((isset($_POST['enot_callb']) && $_POST['enot_callb']) ? Output::getClean(Input::get('enot_callb')) : StoreConfig::get('ENOT.enot_callb')),
+    'ENOT_URLAPI' => ((isset($_POST['enot_apiurl']) && $_POST['enot_apiurl']) ? Output::getClean(Input::get('enot_apiurl')) : StoreConfig::get('ENOT.enot_apiurl'))
 ]);

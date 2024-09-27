@@ -17,7 +17,7 @@
 
 
 <form action="" method="post"><div class="form-group"><label for="inputENOTuuId">{$SHOP_ID}</label>
-<input class="form-control" type="text" id="inputENOTShopuuId" name="shopuuid_key" value="{$SHOP_UUID_VALUE}" placeholder="{$SHOP_ID}">
+<input class="form-control" type="text" id="inputENOTuuId" name="shopuuid_key" value="{$SHOP_UUID_VALUE}" placeholder="{$SHOP_ID}">
 </div>
 
 <div class="form-group"><label for="inputENOTApiKey">{$SHOP_KEY1}</label>
@@ -30,6 +30,10 @@
 
 <div class="form-group"><label for="inputENOThook">{$SHOP_URL_HOOK}</label>
 <input class="form-control" type="text" id="inputENOThook" name="enot_callb" value="{$ENOT_CALLB}" placeholder="{$SHOP_URL_HOOK}">
+</div>
+
+<div class="form-group"><label for="inputENOTurlapi">{$ENOT_URL}</label>
+<input class="form-control" type="text" id="inputENOTurlapi" name="enot_apiurl" value="{$ENOT_URLAPI}" placeholder="{$ENOT_URL}">
 </div>
 
 <div class="form-group custom-control custom-switch">

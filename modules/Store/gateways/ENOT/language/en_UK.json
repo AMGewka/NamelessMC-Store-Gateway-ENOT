@@ -3,6 +3,7 @@
     "key1": "Secret key #1",
     "key2": "Secret key #2",
     "shophookurl": "Notification URL: https://YOUR_DOMAIN/store/listener/?gateway=ENOT",
+    "enotapiurl": "API URL: <br>Standard: https://api.enot.io/invoice/create<br>Reserve-1: https://api.mivion.com/invoice/create<br>Reserve -2: https://api.quilop.com/invoice/create",
     "enablegateway": "Enable payment method",
     "gatewayname": " Payment system <a href=\"https://cabinet.enot.io/registration\" target=\"_blank\">ENOT</a>",
     "bankcard": "<b>Bank cards</b>: <b>Russian Federation cards</b>",
