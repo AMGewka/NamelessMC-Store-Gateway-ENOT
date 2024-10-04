@@ -4,7 +4,7 @@
  *
  * @package Modules\Store
  * @author AMGewka
- * @version 1.8.3
+ * @version 1.8.4
  * @license MIT
  */
 class Enot_Gateway extends GatewayBase {
@@ -12,7 +12,7 @@ class Enot_Gateway extends GatewayBase {
     public function __construct() {
         $name = 'ENOT';
         $author = '<a href="https://github.com/AMGewka" target="_blank" rel="nofollow noopener">AMGewka</a>';
-        $gateway_version = '1.8.3';
+        $gateway_version = '1.8.4';
         $store_version = '1.7.1';
         $settings = ROOT_PATH . '/modules/Store/gateways/ENOT/gateway_settings/settings.php';
 
@@ -22,10 +22,10 @@ class Enot_Gateway extends GatewayBase {
     public function onCheckoutPageLoad(TemplateBase $template, Customer $customer): void {}
 
     public function processOrder(Order $order): void {
-        $shopId = StoreConfig::get('ENOT.shopuuid_key');
-        $apiKey = StoreConfig::get('ENOT.secret1_key');
-        $callba = StoreConfig::get('ENOT.enot_callb');
-        $apiurl = StoreConfig::get('ENOT.enot_apiurl');
+        $shopId = StoreConfig::get('ENOT/shopuuid_key');
+        $apiKey = StoreConfig::get('ENOT/secret1_key');
+        $callba = StoreConfig::get('ENOT/enot_callb');
+        $apiurl = StoreConfig::get('ENOT/enot_apiurl');
         
         if ($shopId == null || empty($shopId)) {
             $this->addError('The administration has not completed the configuration of this gateway!');
@@ -78,9 +78,9 @@ class Enot_Gateway extends GatewayBase {
     }
 
     public function handleListener(): void {
-        $shopId = StoreConfig::get('ENOT.shopuuid_key');
-        $apiKey = StoreConfig::get('ENOT.secret1_key');
-        $extraApiKey = StoreConfig::get('ENOT.secret2_key');
+        $shopId = StoreConfig::get('ENOT/shopuuid_key');
+        $apiKey = StoreConfig::get('ENOT/secret1_key');
+        $extraApiKey = StoreConfig::get('ENOT/secret2_key');
 
         $data = json_decode(file_get_contents('php://input'), true);
 
