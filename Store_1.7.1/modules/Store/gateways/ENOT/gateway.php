@@ -4,7 +4,7 @@
  *
  * @package Modules\Store
  * @author AMGewka
- * @version 1.8.4
+ * @version 1.8.5
  * @license MIT
  */
 class Enot_Gateway extends GatewayBase {
@@ -12,7 +12,7 @@ class Enot_Gateway extends GatewayBase {
     public function __construct() {
         $name = 'ENOT';
         $author = '<a href="https://github.com/AMGewka" target="_blank" rel="nofollow noopener">AMGewka</a>';
-        $gateway_version = '1.8.4';
+        $gateway_version = '1.8.5';
         $store_version = '1.7.1';
         $settings = ROOT_PATH . '/modules/Store/gateways/ENOT/gateway_settings/settings.php';
 
