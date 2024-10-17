@@ -49,12 +49,16 @@ $smarty->assign([
     'ENABLE_GATEWAY' => $enot_language->get('enablegateway'),
     'GATEWAY_NAME' => $enot_language->get('gatewayname'),
     'BANK_CARD' => $enot_language->get('bankcard'),
+    'ONLINE_PAYMENTS' => $enot_language->get('onlinepay'),
     'ONLINE_WALLET' => $enot_language->get('onlinewal'),
     'CRYPTOCURRENCIES' => $enot_language->get('crypto'),
     'GATEWAY_LINK' => $enot_language->get('gatewaylink'),
-    'GATEWAY_TESTED' => $enot_language->get('gatewaytest'),
     'ALERT_URL' => $enot_language->get('alerturl'),
     'SUCCESS_URL' => $enot_language->get('sucurl'),
     'FAILED_URL' => $enot_language->get('failurl'),
-    'ENOT_URL' => $enot_language->get('enotapiurl')
+    'ENOT_URL' => $enot_language->get('enotapiurl'),
+    'PINGBACK_URL' => rtrim(URL::getSelfURL(), '/') . URL::build('/store/listener', 'gateway=ENOT'),
+    'SUCC_URL' => rtrim(URL::getSelfURL(), '/') . URL::build('/store/checkout', 'do=complete'),
+    'WARINFO' => $enot_language->get('warinfo'),
+    'INFO' => $enot_language->get('info')
 ]);

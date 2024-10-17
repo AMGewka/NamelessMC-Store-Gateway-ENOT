@@ -2,17 +2,23 @@
     <div class="card shadow border-left-primary">
         <div class="card-body">
             <h5><i class="icon fa fa-info-circle"></i>{$GATEWAY_NAME}</h5></br>
-            - {$BANK_CARD}</br>
-            - {$ONLINE_WALLET}</br>
-            - {$CRYPTOCURRENCIES}</br></br>
-            - {$GATEWAY_LINK}</br>
-            - {$GATEWAY_TESTED}</br>
-            - {$ALERT_URL}</br>
-            - {$SUCCESS_URL}</br>
-            - {$FAILED_URL}
+            {$BANK_CARD}</br>
+            {$ONLINE_PAYMENTS}</br>
+            {$ONLINE_WALLET}</br>
+            {$CRYPTOCURRENCIES}</br></br>
+            {$GATEWAY_LINK}</br>
+            {$ALERT_URL} <code>{$PINGBACK_URL}</code></br>
+            {$SUCCESS_URL} <code>{$SUCC_URL}</code></br>
+            {$FAILED_URL}
         </div>
     </div>
-
+    <br />
+    <div class="card shadow border-left-warning">
+        <div class="card-body">
+            <h5><i class="icon fa fa-info-circle"></i>{$WARINFO}</h5>
+            {$INFO}
+        </div>
+    </div>
     <br />
 
 
