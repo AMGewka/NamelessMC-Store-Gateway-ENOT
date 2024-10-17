@@ -7,7 +7,6 @@
     "enablegateway": "Enable payment method",
     "gatewayname": " Payment system <a href=\"https://cabinet.enot.io/registration\" target=\"_blank\">ENOT</a>",
     "bankcard": "<b>Bank cards</b>: <b>Payment by RF card</b>",
-    "onlinepay": "<b>Electronic payments</b>: <b>SBP</b>",
     "onlinewal": "<b>Electronic wallets</b>: <b>Perfect Money</b>",
     "crypto": "<b>Cryptocurrencies</b>: <b>Bitcoin</b>, <b>Ethereum</b>, <b>USDT TRC20</b>, <b>USDT ERC20</b>, <b>Litecoin</b>, <b>TRX</b> and <b>DASH</b>",
     "gatewaylink": "To register in ENOT, use <a href=\"https://cabinet.enot.io/registration\" target=\"_blank\">this link</a>.",

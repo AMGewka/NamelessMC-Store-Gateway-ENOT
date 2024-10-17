@@ -3,7 +3,6 @@
         <div class="card-body">
             <h5><i class="icon fa fa-info-circle"></i>{$GATEWAY_NAME}</h5></br>
             {$BANK_CARD}</br>
-            {$ONLINE_PAYMENTS}</br>
             {$ONLINE_WALLET}</br>
             {$CRYPTOCURRENCIES}</br></br>
             {$GATEWAY_LINK}</br>

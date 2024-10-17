@@ -49,7 +49,6 @@ $smarty->assign([
     'ENABLE_GATEWAY' => $enot_language->get('enablegateway'),
     'GATEWAY_NAME' => $enot_language->get('gatewayname'),
     'BANK_CARD' => $enot_language->get('bankcard'),
-    'ONLINE_PAYMENTS' => $enot_language->get('onlinepay'),
     'ONLINE_WALLET' => $enot_language->get('onlinewal'),
     'CRYPTOCURRENCIES' => $enot_language->get('crypto'),
     'GATEWAY_LINK' => $enot_language->get('gatewaylink'),
